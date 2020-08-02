@@ -2,13 +2,17 @@
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
     <_name>Sieve</_name>
     <id>com.fourpeaksstudios.sieve</id>
-    <param name="use" type="description" xml:space="preserve">Paths with area smaller than the given area threshold will be deleted</param>
+    <param name="use" type="description" xml:space="preserve">Paths with value smaller than the given threshold will be deleted</param>
     <param name="unit" _gui-text="Unit" type="enum">
-        <_item value="mm">mm^2</_item>
-        <_item value="cm">cm^2</_item>
-        <_item value="m">m^2</_item>
+        <_item value="mm">mm</_item>
+        <_item value="cm">cm</_item>
+        <_item value="m">m</_item>
     </param>
-    <param name="area" type="float" min="0.0" max="10000000.0" _gui-text="Area (Unit^2):">1.0</param>
+    <param name="threshold" type="float" min="0.0" max="10000000.0" _gui-text="Threshold">1.0</param>
+    <param name="measure" type="optiongroup" appearance="minimal" _gui-text="Measure by">
+        <option value="length">Length (Unit)</option>
+        <option value="area">Area (Unit^2)</option>
+    </param>
     <effect>
         <object-type>all</object-type>
         <effects-menu>
